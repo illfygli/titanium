@@ -166,7 +166,7 @@ fn get_elements_to_hint(document: &DOMDocument) -> Vec<DOMElement> {
 /// Get the hintable elements, except the input.
 fn get_hintable_elements(document: &DOMDocument) -> Vec<DOMElement> {
     let mut elements_to_hint = vec![];
-    let tag_names = ["a", "button", "select", "textarea"];
+    let tag_names = ["a", "button", "select", "textarea", "summary"];
     for tag_name in &tag_names {
         let elements = NodeIter::new(document.get_elements_by_tag_name(tag_name));
         for element in elements {
